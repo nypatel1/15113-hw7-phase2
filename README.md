@@ -48,10 +48,16 @@ W: Where Watergirl starts the level.
 
 .: Empty air (background).
 
-WHAT TO ADD NEXT
+---
+---
 
-ADD NEW LETTERS TO REPRESENT DANGEROUS POOLS (E.G., TYPE 'L' FOR LAVA POOLS AND 'P' FOR WATER POOLS).
+# HOMEWORK #7 — Phase 2 Extension
+## What I Added
 
-ADD LETTERS FOR PUZZLE PIECES (E.G., 'B' FOR A BUTTON, 'D' FOR A DOOR).
+* Bug Fixes — Fixed a wrong filename in `main.py` that prevented the game from launching, added the missing `Watergirl` class to `player.py`, and corrected broken movement code in `Fireboy.handle_input()`.
 
-CREATE MULTIPLE FILES FOR DIFFERENT STAGES (E.G., level_2.txt, level_3.txt) ONCE THE GAME CAN TRANSITION BETWEEN THEM.
+* Physics & Collision — Implemented full AABB collision detection in `player.py` so both characters land on floors, bump into walls, and can only jump when grounded.
+
+* Hazards, Death & Respawn — Added lava (`L`) and poison (`P`) tiles to the level map and wrote character-specific survival rules so Fireboy dies in poison and Watergirl dies in lava, with both respawning at their start position after 2 seconds.
+
+* Sprites & Animation — Replaced the coloured squares with hand-drawn characters built entirely from `pygame.draw` calls, and added a three-state animation system (idle, run, jump) that switches automatically based on each character's movement.
